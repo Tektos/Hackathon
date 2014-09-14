@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en" data-ng-app="hackathon">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="CSS/StyleSheet.css" />
+        <!--<link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css" />-->
+        <script type="text/javascript" src="Scripts/angular.min.js"></script>
+        <script type="text/javascript" src="Scripts/app.js"></script>
+    </head>
+    <body data-ng-controller="PanelController as panel">
+        <form method="post" action="activités.php">
+            <section class="container" data-ng-controller="PanelController as panel" style="width: 100%;">
+                <input type="button" value="Laissez-vous guider"/>
+                <br />
+                <ul class="nav nav-pills">
+                    <li data-ng-class="{ active: panel.isSelected(1)}">
+                        <input type="text" data-ng-click="panel.selectTab(1)" placeholder="Près d'ici"/>
+                    </li>
+                    <li data-ng-class="{ active: panel.isSelected(2)} ">
+                        <input type="button" data-ng-click="panel.selectTab(2)" value="Itinéraire"/>
+                    </li>
+                </ul>
+                <br />
+                <input type="text" name="départ" placeholder="Départ"><br />
+                <input type="text" name="arrivée" placeholder="Arrivée" data-ng-show="panel.isSelected(2)"/>
+                <br data-ng-show="panel.isSelected(2)"/>
+                <select name="durée">
+                    <option hidden>durée</option>
+                    <option>1 jour</option>
+                    <option>2 jour</option>
+                    <option>3 jour</option>
+                    <option>4 jour</option>
+                    <option>5 jour</option>
+                    <option>6 jour</option>
+                    <option>1 semaine</option>
+                </select><br />
+                <input type="date" name="datedep"/><input type="date" name="datearr"/>
+                <br />
+                <input type="submit" value="C'est parti !!"/>
+            </section>
+        </form>
+    </body>
+</html>

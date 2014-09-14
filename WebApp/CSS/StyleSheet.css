@@ -1,0 +1,17 @@
+body {
+}
+
+button:active{
+    background-color: #0094ff;
+}
+
+ul {
+    list-style-type : none; /* Car sinon les puces se placent n'importe où */
+    padding: 0px;
+    margin: 0px;
+}
+
+li{  
+    display : inline;
+    padding : 0 2px; /* Pour espacer les boutons entre eux */
+}

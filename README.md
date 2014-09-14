@@ -1,4 +1,4 @@
 Hackathon
 =========
 
-OpenData et Tourisme en Côte d'Opale
+OpenData et Tourisme en Côte d'Opale.
